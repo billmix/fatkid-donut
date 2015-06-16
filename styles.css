@@ -1,0 +1,29 @@
+body{
+	background-color: #eee;
+	font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:800;
+}
+table{
+	border:1px dotted;
+}
+thead p{
+	font-size:18px;
+	text-align:center;
+	font-weight:800;
+	border-bottom:1px dotted;
+}
+p, table, tr, td, footer{
+	font-size:14px;
+	font-weight:300;
+}
+td p{
+	margin:0;
+	padding:0;
+}
+td{
+	padding:0 25px 0 15px;
+}
+
+
