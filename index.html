@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animals</title>
+	<title>Fat Kid Donut Shoppe</title>
 	<style>
     li {
         position: relative;
@@ -9,9 +9,50 @@
  </style>
 </head>
 <body>
+<h1>Welcome to Fat Kid Donut Shoppe</h1>
+<p>This application calculates the number of total daily and hourly donuts needed using a random number of daily visitors. The daily visitors are based on daily minimum and maximum customers for each location, and take into consideration the number of hours that each location is open. Donut numbers are rounded up to avoid running short on inventory! Nobody wants an angry fat kid!</p>
 
+<table>
+	<thead>Fat Kid Donut Shop</thead>
+	<tbody>
+		<tr>
+			<td>Shop Name</td>
+			<td>Daily Donuts</td>
+			<td>Hourly Donuts</td>
+		</tr>
+		<tr>
+			<td>Name 1</td>
+			<td>Daily Donut Count 1</td>
+			<td>Hourly Donut Count 1</td>
+		</tr>
+		<tr>
+			<td>Name 2</td>
+			<td>Daily Donut Count 2</td>
+			<td>Hourly Donut Count 2</td>
+		</tr>
+		<tr>
+			<td>Name 3</td>
+			<td>Daily Donut Count 3</td>
+			<td>Hourly Donut Count 3</td>
+		</tr>
+		<tr>
+			<td>Name 4</td>
+			<td>Daily Donut Count 4</td>
+			<td>Hourly Donut Count 4</td>
+		</tr>
+		<tr>
+			<td>Name 5</td>
+			<td>Daily Donut Count 5</td>
+			<td>Hourly Donut Count 5</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<br />
+<footer>&copy;2015 Fat Kid Donut Shoppe. All rights reserved.</footer>
+
+</body>
 	<script>
-
 		function DonutShop( name, minCust, maxCust, avgUnits, closeTime, openTime ){
 	        this.name = name;
 	        this.minCust = minCust;
@@ -39,17 +80,8 @@
 
     	shops.forEach(function(shop) {
     		shop.calculate();
-    		console.log("Shop Name: " + shop.name, " // Daily Donuts: " + shop.dailyUnits, "// Hourly Donuts: " + shop.hourlyUnits);
+    		//document.write("<tr><td>" + shop.name + "</td>", "<td>" + shop.dailyUnits + "</td>", "<td>" + shop.hourlyUnits + "</td></tr>");
     	});
 
-    	//console.log(shops);
-    	/*for(var i = 0; i < shops; i++){
-    		shop = shops[i];
-        	shop.calculate();
-    	}*/
-
-
-
 	</script>
-</body>
 </html>
