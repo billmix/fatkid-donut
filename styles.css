@@ -1,21 +1,24 @@
 body{
-	background-color: #eee;
+	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
+	background: url('images/background.jpg') repeat;
 }
 h1, h2, h3, h4, h5, h6{
-	font-weight:800;
+	font-weight:300;
 }
 table{
 	border:1px dotted;
+	background-color:#fff;
+	margin-bottom:25px;
 }
 thead p{
 	font-size:18px;
-	text-align:center;
+	text-align:left;
 	font-weight:800;
 	border-bottom:1px dotted;
 }
 p, table, tr, td, footer{
-	font-size:14px;
+	font-size:18px;
 	font-weight:300;
 }
 td p{
@@ -23,7 +26,52 @@ td p{
 	padding:0;
 }
 td{
-	padding:0 25px 0 15px;
+	/*padding:0 25px 0 15px;*/
 }
-
-
+footer{
+	position: absolute;
+	bottom:0;
+	left:auto;
+	color:white;
+}
+.container{
+	display:block;
+	width:80%;
+	margin:25px auto;
+	padding:25px;
+	background-color:#fff;
+	border:1px dotted #333;
+	opacity: 0.95;
+}
+#shopDetail{
+	width:900px;
+}
+#shopDetail p{
+	margin:5px 0 5px 20px;
+}
+#shopDetail h2{
+	padding:30px 0 0 20px;
+ }
+.indexClass{
+	background-color:#ddd;
+}
+.selected{
+	text-decoration: none;
+	border:1px solid #ccc;
+}
+#detailsGlance{
+	width:900px;
+	padding: 25px;
+}
+div[id^="detailsContainer"], div[id*="detailsContainer"]{
+	display:none;
+	width:900px;
+	height:400px;
+	background-color:#eee;
+	margin:0 0 25px 0;
+	clear:both;
+}
+.mapEmbed span{
+	/*display:block;*/
+	float:right;
+}
