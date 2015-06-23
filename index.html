@@ -13,22 +13,10 @@
 	<h1>Fat Kid Donut Shoppe</h1>
 	<p>This application calculates the number of total daily and hourly donuts needed using a random number of daily visitors. The daily visitors are based on daily minimum and maximum customers for each location, and take into consideration the number of hours that each location is open. Donut numbers are rounded up to avoid running short on inventory! Nobody wants an angry fat kid!</p>
 
-	<table id="detailsGlance">
-		<thead>
-			<tr>
-				<td>
-					<p>Shop Name</p>
-				</td>
-				<td>
-					<p>Daily Donuts</p>
-				</td>
-				<td>
-					<p>Hourly Donuts</p>
-				</td>
-			</tr>
-		</thead>
-		<tbody id="list"></tbody>
-	</table>
+	<div id="detailsGlance">
+		<p><strong>Select Your Shop</strong></p>
+		<p id="list"></p>
+	</div>
 	<div id="shopDetail">
 		<!-- insert shop detail --> 
 	</div>
@@ -87,11 +75,10 @@
 
             //table data
    			$list.append($listHolder);
-   			$listHolder.append($shopName).append($dailyUnits).append($hourlyUnits);
+   			$listHolder.append($shopName);
 
    			//shop details
    			$shopDetail.append($details);
-   			$details.append($mapEmbed).addClass('mapEmbed');
    			$details.append(
    					'<h2>Shop Name: ' + shop.name + '</h2>',
    					'<p>Today\'s Customer Count: ' + shop.randomCust + '</p>',
@@ -99,12 +86,11 @@
    					'<p>Daily Donuts: ' + shop.dailyUnits + '</p>',   					
    					'<p>Hours: ' + shop.openTime + ':00 am - ' + (24 - shop.closeTime) + ':00 pm' + '</p>'
    				)
-
+   			$details.append($mapEmbed).addClass('mapEmbed');
    			$('#makeDetail' + index).click(function(e){
    				e.preventDefault();
    				var $this = $(this).parent().find('#detailsContainer');
    				$('#shopDetail #detailsContainer').not($this).hide();
-                $shopName.toggleClass('selected');
                 $details.toggle();
             });
 

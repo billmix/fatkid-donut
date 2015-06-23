@@ -6,27 +6,12 @@ body{
 h1, h2, h3, h4, h5, h6{
 	font-weight:300;
 }
-table{
-	border:1px dotted;
-	background-color:#fff;
-	margin-bottom:25px;
-}
-thead p{
-	font-size:18px;
-	text-align:left;
-	font-weight:800;
-	border-bottom:1px dotted;
-}
 p, table, tr, td, footer{
 	font-size:18px;
 	font-weight:300;
 }
-td p{
-	margin:0;
-	padding:0;
-}
-td{
-	/*padding:0 25px 0 15px;*/
+a, a:hover, a:link, a:visited{
+	color:#333;
 }
 footer{
 	position: absolute;
@@ -44,7 +29,7 @@ footer{
 	opacity: 0.95;
 }
 #shopDetail{
-	width:900px;
+	width:100%;
 }
 #shopDetail p{
 	margin:5px 0 5px 20px;
@@ -57,15 +42,15 @@ footer{
 }
 .selected{
 	text-decoration: none;
-	border:1px solid #ccc;
+	font-weight:600;
 }
 #detailsGlance{
-	width:900px;
-	padding: 25px;
+	width:100%;
+	padding: 0;
 }
-div[id^="detailsContainer"], div[id*="detailsContainer"]{
+#detailsContainer{
 	display:none;
-	width:900px;
+	width:100%;
 	height:400px;
 	background-color:#eee;
 	margin:0 0 25px 0;
@@ -74,4 +59,20 @@ div[id^="detailsContainer"], div[id*="detailsContainer"]{
 .mapEmbed span{
 	/*display:block;*/
 	float:right;
+}
+
+@media screen and (max-width: 700px){
+	span iframe{
+		float:none;
+		clear:left;
+		width:100%;
+	}
+	#detailsContainer{
+	display:none;
+	width:100%;
+	height:700px;
+	background-color:#eee;
+	margin:0 0 25px 0;
+	clear:both;
+}
 }
