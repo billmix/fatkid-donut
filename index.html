@@ -79,26 +79,32 @@
 
    			//shop details
    			$shopDetail.append($details);
+   			$details.append($mapEmbed).addClass('mapEmbed');
    			$details.append(
    					'<h2>Shop Name: ' + shop.name + '</h2>',
-   					'<p>Today\'s Customer Count: ' + shop.randomCust + '</p>',
+   					'<p>Today\'s actual customers <input id=\"actual\" type=\"text\"><p class=\"updated\"></p></p>',
+   					'<p>Today\'s Customer Count: <span id=\"customerCount\">' + shop.randomCust + '</span></p>',
    					'<p>Hourly Donuts: ' + shop.hourlyUnits + '</p>',
-   					'<p>Daily Donuts: ' + shop.dailyUnits + '</p>',   					
+   					'<p>Daily Donuts: ' + shop.dailyUnits + '</p>',				
    					'<p>Hours: ' + shop.openTime + ':00 am - ' + (24 - shop.closeTime) + ':00 pm' + '</p>'
    				)
-   			$details.append($mapEmbed).addClass('mapEmbed');
+   			
+   			
    			$('#makeDetail' + index).click(function(e){
    				e.preventDefault();
    				var $this = $(this).parent().find('#detailsContainer');
    				$('#shopDetail #detailsContainer').not($this).hide();
                 $details.toggle();
             });
+    		
+   			$( '#actual' ).keyup( function() {
+				var value = $( this ).val();
+				$( '#customerCount' ).text ( value );
+				shop.randomCust = value;
+				shop.calculate();
+			});
 
-
-            
-            
         });
-            
 	</script>
 </html>
 
